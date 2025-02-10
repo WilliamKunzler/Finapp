@@ -1,0 +1,19 @@
+:root {
+    --yellow: #C8EE44;
+    --green: #29A073;
+    --text-1:#FFFFFF;
+    --text-2:#929EAE;
+    --text-3: #78778B;
+    --dark-1: #201E34;
+    --dark-2: #282541;
+    --dark-bg: #1C1A2E;
+    --dark-shade: #1E1C30;
+    --key-black: #363A3F;
+    --error: #E5363D;
+    --success: #19D076;
+    --gray-1: #FAFAFA;
+    --gray-2: #F8F8F8;
+    --gray-3: #F5F5F5;
+    --gray-4: #FDFDFD;
+    --gray-5: #F2F2F2;
+}
