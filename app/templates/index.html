@@ -6,6 +6,14 @@
     <title>Finapp</title>
 </head>
 <body>
-    
+    {% include 'components/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'components/navbar.html' %}
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>
