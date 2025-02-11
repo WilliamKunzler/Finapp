@@ -8,10 +8,85 @@
 .field-form {
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .field-image {
     width: 50%;
     height: 100%;
     background-color: var(--dark-1);
+}
+
+.container-form {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-block: 50px ;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-account {
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+.container-form h5 {
+    font-weight: lighter;
+    color: var(--text-3);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.container-form label {
+    font-size: 14px;
+}
+
+.container-form input {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-5);
+    width: 100%;
+    margin-block:10px ;
+}
+
+.container-form button {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--yellow);
+    color: var(--dark-1);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sign-in {
+    color: var(--text-2);
+    margin-top: 30px;
+    align-self: center;
+}
+
+.sign-in span {
+    cursor: pointer;
+    color: var(--dark-1);
+}
+
+@media (max-width: 920px) {
+    .field-image {
+        display: none;
+    }
+    .field-form{
+        width: 100%;
+    }
+    .account-container {
+        justify-content: center;
+        align-items: center;
+    }
 }
