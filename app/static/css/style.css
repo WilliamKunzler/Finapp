@@ -1,3 +1,12 @@
+
+@import url("../css/register.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --yellow: #C8EE44;
     --green: #29A073;
@@ -17,3 +26,4 @@
     --gray-4: #FDFDFD;
     --gray-5: #F2F2F2;
 }
+
