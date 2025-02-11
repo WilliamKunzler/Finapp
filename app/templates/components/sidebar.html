@@ -1,21 +1,23 @@
 <aside class="sidebar">
     <h2 id="title-sidebar">Finapp</h2>
-    <ul class="nav-sidebar">
-        <li>
-            <span class="material-symbols-outlined">dashboard</span>
-            <a href="{{ url_for('home.home_handler') }}">Dashboard</a>
-        </li>
-        <li>
-            <span class="material-symbols-outlined">contract</span>
-            <a href="{{ url_for('transactions.transactions_handler') }}">Transactions</a>
-        </li>
-        <li>
-            <span class="material-symbols-outlined">settings</span>
-            <a href="{{ url_for('settings.settings_handler') }}">Settings</a>
-        </li>
-    </ul>
-    <ul class="logout-sidebar-content">
-        <span class="material-symbols-outlined">logout</span>
-        <a href="{{ url_for('login.login_handler')}}">Logout</a>
-    </ul>
+    <div class="menu-content-sidebar">
+        <ul class="nav-sidebar">
+            <li>
+                <span class="material-symbols-outlined">dashboard</span>
+                <a href="{{ url_for('home.home_handler') }}">Dashboard</a>
+            </li>
+            <li>
+                <span class="material-symbols-outlined">contract</span>
+                <a href="{{ url_for('transactions.transactions_handler') }}">Transactions</a>
+            </li>
+            <li>
+                <span class="material-symbols-outlined settings-icon">settings</span>
+                <a href="{{ url_for('settings.settings_handler') }}">Settings</a>
+            </li>
+        </ul>
+        <ul class="logout-sidebar-content">
+            <span class="material-symbols-outlined">logout</span>
+            <a href="{{ url_for('login.login_handler')}}">Logout</a>
+        </ul>
+    </div>
 </aside>

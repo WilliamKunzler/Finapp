@@ -1,0 +1,46 @@
+#navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 40px;
+}
+
+.title-navbar {
+    font-size: 25px;
+}
+
+.menu-navbar {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+}
+
+.menu-navbar span {
+    cursor: pointer;
+    color: var(--text-2);
+}
+
+.menu-navbar span:hover {
+    color: black;
+}
+
+.perfil-content {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-1);
+    border-radius: 100px;
+    padding: 7px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.perfil-content div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil-content span {
+    color: black;
+}
