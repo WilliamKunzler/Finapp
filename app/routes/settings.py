@@ -4,4 +4,4 @@ settings = Blueprint('settings', __name__, url_prefix='/settings')
 
 @settings.route('/')
 def settings_handler():
-    return render_template('settings.html')
+    return render_template('index.html', title="Settings")
