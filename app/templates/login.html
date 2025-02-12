@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Finapp</title>
 </head>
 <body>
+
+    <div class="account-container">
+
+        <div class="field-form">
+
+            <div class="container-form">
+                <h1>Finapp</h1>
+                <h1 class="title-account">Welcome back</h1>
+                <h5>Welcome back! Please enter your details</h5>
+                <form id="form-login" action=""> 
+                    <label>Email</label>
+                    <input type="email" id="email-login" name="email-login" required>
+            
+                    <label>Password</label>
+                    <input type="password" id="senha-login" name="senha-login" required>
+
+                    <div id="field-remember">
+                        <div id="remember">
+                            <input type="checkbox" name="" id="">
+                            <span>Remember me</span>
+                        </div>
+                        <a href="#">Forgot password</a>
+                    </div>
+            
+                    <button type="submit" class="login">Sign in</button>
+                </form>
+                <p class="sign-in">Don't have an account?<a href="{{url_for('register.register_handler')}}"> Sign up for free</a></p>
+            </div>
+
+        </div>
+        <div class="field-image">
+            <img id="imageLogin" src="../static/assets/loginImage.png" alt="">
+        </div>
+    </div>
     
 </body>
 </html>

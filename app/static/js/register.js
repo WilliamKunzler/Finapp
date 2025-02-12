@@ -28,7 +28,7 @@ document.querySelector("#form-register").addEventListener('submit', (event) => {
         else{
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
+                title: "Usuário Inválido!",
                 draggable: true
               });
         }
