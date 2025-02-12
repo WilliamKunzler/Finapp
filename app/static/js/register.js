@@ -1,4 +1,4 @@
-document.querySelector(".userAdd").addEventListener('click', (event) => {
+document.querySelector("#form-register").addEventListener('submit', (event) => {
     event.preventDefault();
 
     let user = document.querySelector("#nome").value;
@@ -12,14 +12,28 @@ document.querySelector(".userAdd").addEventListener('click', (event) => {
         },
         body: JSON.stringify({username:user, password: senha, email: email})
     })
+    
     .then(data => {
 
-        console.log(data)
+
         if (data.status == 200) {
             Swal.fire({
-                title: "Drag me!",
+                title: "Usuário cadastrado!",
                 icon: "success",
                 draggable: true
-        });
-}})            
+            }).then(() => {
+                window.location.href = '/login';
+            });
+        }
+        else{
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                draggable: true
+              });
+        }
+
+    
+
+})
 })

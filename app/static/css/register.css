@@ -81,7 +81,7 @@
     align-self: center;
 }
 
-.sign-in span {
+.sign-in a {
     cursor: pointer;
     color: var(--dark-1);
 }

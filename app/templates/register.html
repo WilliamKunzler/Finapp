@@ -16,7 +16,7 @@
                 <h1>Finapp</h1>
                 <h1 class="title-account">Create new account</h1>
                 <h5>Welcome back! Please enter your details</h5>
-                <form action="">
+                <form id="form-register" action="">
                     <label>Name</label>
                     <input type="text" id="nome" name="nome" required>
             
@@ -28,7 +28,7 @@
             
                     <button type="submit" class="userAdd">Create Account</button>
                 </form>
-                <p class="sign-in">Already have an account?<span> Sign in</span></p>
+                <p class="sign-in">Already have an account?<a href="{{url_for('login.login_handler')}}"> Sign in</a></p>
             </div>
 
         </div>
