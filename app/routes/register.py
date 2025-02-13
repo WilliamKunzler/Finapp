@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, redirect, render_template, request, url_for
+from flask import Blueprint, jsonify, render_template, request, url_for
 from app.database.db import db  
 
 register = Blueprint('register', __name__, url_prefix='/register')

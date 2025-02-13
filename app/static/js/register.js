@@ -14,8 +14,6 @@ document.querySelector("#form-register").addEventListener('submit', (event) => {
     })
     
     .then(data => {
-
-
         if (data.status == 200) {
             Swal.fire({
                 title: "Usuário cadastrado!",
