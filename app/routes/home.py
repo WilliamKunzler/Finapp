@@ -1,7 +1,9 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, redirect, render_template, url_for
 
 home = Blueprint('home', __name__)
 
+
 @home.route('/')
 def home_handler():
-    return render_template('index.html', title="Dashboard")
+    return redirect(url_for('login.login_handler'))
+

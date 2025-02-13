@@ -14,8 +14,6 @@ document.querySelector("#form-register").addEventListener('submit', (event) => {
     })
     
     .then(data => {
-
-
         if (data.status == 200) {
             Swal.fire({
                 title: "Usuário cadastrado!",
@@ -28,7 +26,7 @@ document.querySelector("#form-register").addEventListener('submit', (event) => {
         else{
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
+                title: "Usuário Inválido!",
                 draggable: true
               });
         }

@@ -23,6 +23,7 @@
     transition: .2s ease-in-out;
     cursor: pointer;
     color: var(--text-2);
+    user-select: none;
 }
 
 .nav-sidebar li a, .logout-sidebar-content a {

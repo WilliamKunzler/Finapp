@@ -1,6 +1,7 @@
 @import url("../css/sidebar.css");
 @import url("../css/register.css");
 @import url("../css/navbar.css");
+@import url("../css/login.css");
 @import url('https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
@@ -46,4 +47,5 @@ body {
 
 .main-content {
     width: 100%;
+    margin: 0 40px 0 40px;
 }

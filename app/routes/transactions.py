@@ -4,4 +4,4 @@ transactions = Blueprint('transactions', __name__, url_prefix='/transactions')
 
 @transactions.route('/')
 def transactions_handler():
-    return render_template('index.html', title="Transactions")
+    return render_template('index.html', title="transactions")

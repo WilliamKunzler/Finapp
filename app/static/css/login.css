@@ -1,0 +1,30 @@
+#field-remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#field-remember a {
+    color: var(--dark-1);
+}
+
+#remember {
+    display: flex;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#remember input {
+    width: 20px;
+    height: 20px;
+}
+
+#imageLogin {
+    width: 80%;
+    height: 60%;
+}

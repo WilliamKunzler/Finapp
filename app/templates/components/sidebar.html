@@ -2,22 +2,22 @@
     <h2 id="title-sidebar">Finapp</h2>
     <div class="menu-content-sidebar">
         <ul class="nav-sidebar">
-            <li>
+            <li class="item-sidebar" id="dashboard">
                 <span class="material-symbols-outlined">dashboard</span>
-                <a href="{{ url_for('home.home_handler') }}">Dashboard</a>
+                <span>Dashboard</span>
             </li>
-            <li>
+            <li class="item-sidebar" id="transactions">
                 <span class="material-symbols-outlined">contract</span>
-                <a href="{{ url_for('transactions.transactions_handler') }}">Transactions</a>
+                <span>Transactions</span>
             </li>
-            <li>
+            <li class="item-sidebar" id="settings">
                 <span class="material-symbols-outlined settings-icon">settings</span>
-                <a href="{{ url_for('settings.settings_handler') }}">Settings</a>
+                <span>Settings</span>
             </li>
         </ul>
-        <ul class="logout-sidebar-content">
+        <ul class="logout-sidebar-content item-sidebar" id="login">
             <span class="material-symbols-outlined">logout</span>
-            <a href="{{ url_for('login.login_handler')}}">Logout</a>
+            <span>Logout</span>
         </ul>
     </div>
 </aside>

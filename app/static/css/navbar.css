@@ -2,11 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 40px;
+    padding: 30px 0px 30px 0px;    
 }
 
 .title-navbar {
     font-size: 25px;
+    text-transform: capitalize;
 }
 
 .menu-navbar {
