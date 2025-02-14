@@ -16,6 +16,49 @@
     height: 500px;
 }
 
+#field-image {
+    pointer-events: none;
+    cursor: pointer;
+    user-select: none;
+    width: 200px;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+#field-image img {
+    display: block;
+    width: 200px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5); /* Cinza transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#field-image:hover .overlay {
+    opacity: 1;
+}
+
+.edit-icon {
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
 .edit {
     display: flex;
     justify-content: space-between;
@@ -40,6 +83,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     gap: 60px;
     margin-block: 20px;
@@ -47,6 +91,10 @@
 
 .fields-set div {
     width: 100%;
+}
+
+input[type="file"] {
+    display: none;
 }
 
 .fields-set input {

@@ -8,41 +8,50 @@
         <h1 class="title-settings">Personal Information</h1>
         <a class="title-settings" id="edit-button" href=""><span class="material-symbols-outlined">border_color</span> Edit</a>
     </div>
-    <form action="">
+    <form id="form-settings" action="">
         <div class="fields-set">
-            <div >
-                <label for="">First Name</label>
-                <input type="text">
+            <input type="file" id="fileInput" accept="image/*">
+            <div id="field-image">
+                <img id="previewImage" src="../static/assets/avatarExampleLarge.png" alt="Imagem">
+                <div class="overlay">
+                    <span class="material-symbols-outlined edit-icon">border_color</span>
+                </div>
             </div>
             <div>
-                <label for="">Last Name</label>
-                <input type="text">
+                <div >
+                    <label for="">First Name</label>
+                    <input id="first_name" type="text" value="{{ infoUser[0]['first_name'] }}">
+                </div>
+                <div>
+                    <label for="">Last Name</label>
+                    <input id="last_name" type="text" value="{{ infoUser[0]['last_name'] }}">
+                </div>   
             </div>
         </div>
         <div class="fields-set">
             <div >
                 <label for="">Data of Birth</label>
-                <input type="date">
+                <input id="date_birth" type="date" value="{{ infoUser[0]['date_birth'] }}">
             </div>
             <div>
                 <label for="">Mobile Number</label>
-                <input type="tel">
+                <input id="mobile_number" type="tel" value="{{ infoUser[0]['mobile_number'] }}">
             </div>
         </div>
         <div class="fields-set">
             <div>
                 <label for="">Email</label>
-                <input type="email"> 
+                <input id="email" type="email" value="{{ infoUser[0]['email'] }}"> 
             </div>
         </div>
         <div class="fields-set">
             <div >
                 <label for="">New Password</label>
-                <input type="password">
+                <input id="senha" type="password" value="{{ infoUser[0]['senha'] }}">
             </div>
             <div>
                 <label for="">Confirm Password</label>
-                <input type="password">
+                <input id="confirm_senha" type="password" value="{{ infoUser[0]['senha'] }}">
             </div>
         </div>
 
