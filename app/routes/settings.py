@@ -4,12 +4,13 @@ from PIL import Image
 from io import BytesIO
 import io
 from app.database.db import db
+from app.routes.home import loadNavbar
 
 settings = Blueprint('settings', __name__, url_prefix='/settings')
 
 @settings.route('/')
 def settings_handler():
-    return render_template('index.html', title="settings")
+    return loadNavbar('settings')
 
 
 @settings.route('/loadDetails', methods=['GET'])
@@ -51,7 +52,6 @@ def update_handler():
             db.query("UPDATE details_users SET first_name = %s, last_name = %s, date_birth = %s, mobile_number = %s, image = %s WHERE userID = %s", first_name, last_name, date_birth, mobile_number, image_blob, session["user"]["id"])
         
         db.query("UPDATE usuarios SET email = %s, senha = %s WHERE UserID = %s", email, senha, session["user"]["id"])
-        
     
         return jsonify({"message": "Dados atualizados com sucesso!"}), 200
 

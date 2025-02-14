@@ -36,6 +36,14 @@
     cursor: pointer;
 }
 
+.perfil-content img {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 35px;
+    height: 35px;
+}
+
 .perfil-content div {
     display: flex;
     align-items: center;

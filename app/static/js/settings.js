@@ -66,7 +66,6 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
           });
         return;
     }
-    let infoUser = {"first_name": first_name, "last_name": last_name, "email": email, "date_birth": date_birth, "mobile_number": mobile_number, "senha": senha}
 
     fetch("/settings/update", {
         method: "POST",
@@ -78,6 +77,8 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
                 icon: "success",
                 title: "Success Update!",
                 draggable: true
+                }).then(() => {
+                    location.reload();
               });
             document.querySelector("#btn-edit").style.display = "none"
             document.querySelector("#edit-button").style.display = "block"
@@ -86,6 +87,7 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
                 document.querySelector('#field-image').style.pointerEvents = "none";
                 input.style.border = "1px solid var(--gray-5)";
             });
+            
         }
         else {
             Swal.fire({

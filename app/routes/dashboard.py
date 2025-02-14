@@ -1,8 +1,11 @@
-from flask import Blueprint, redirect, render_template, url_for
+
+from flask import Blueprint, render_template, session, url_for
+
+from app.routes.home import loadNavbar
 
 
 dashboard = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 
 @dashboard.route('/')
 def dashboard_handler():
-    return render_template('index.html', title="dashboard")
+    return loadNavbar('dashboard')
