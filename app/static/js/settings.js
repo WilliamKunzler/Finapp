@@ -1,3 +1,23 @@
+requestAnimationFrame(() => {
+    if(window.location.pathname == '/settings/') {
+        fetch("/settings/loadDetails")
+        .then(response => response.json())
+        .then(data => {
+                let image = document.getElementById('previewImage');
+                document.getElementById('first_name').value = data.data[0]['first_name']
+                document.getElementById('last_name').value = data.data[0]['last_name']
+                document.getElementById('date_birth').value = data.data[0]['date_birth']
+                document.getElementById('mobile_number').value = data.data[0]['mobile_number']
+                document.getElementById('email').value = data.data[0]['email']
+                document.getElementById('senha').value = data.data[0]['senha']
+                document.getElementById('confirm_senha').value = data.data[0]['senha']
+
+                data.data[0]['image'] == "" ? image.src = "../static/assets/userDefault.png" : image.src = 'data:image/jpeg;base64,' + data.data[0]['image']
+            });
+            }
+    
+})
+
 document.querySelector("#edit-button").addEventListener("click", (e) => {
     e.preventDefault()
     document.querySelector("#btn-edit").style.display = "block"
@@ -21,7 +41,23 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
     let senha = document.querySelector("#senha").value
     let confirm_senha = document.querySelector("#confirm_senha").value
     let image = document.querySelector('#fileInput').files[0]
-    console.log(image)
+    if (!image) {
+        if (document.querySelector('#previewImage').src != '../static/assets/userDefault.png') {
+            image = null
+        }
+    } 
+
+    let formData = new FormData();
+    formData.append("first_name", first_name);
+    formData.append("last_name", last_name);
+    formData.append("email", email);
+    formData.append("date_birth", date_birth);
+    formData.append("mobile_number", mobile_number);
+    formData.append("senha", senha);
+    formData.append("image", image); // Adiciona a imagem ao FormData
+    
+
+
     if (senha != confirm_senha) {
         Swal.fire({
             icon: "error",
@@ -34,10 +70,7 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
 
     fetch("/settings/update", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(infoUser)
+        body: formData
     })
     .then(data => {
         if (data.status == 200) {
@@ -49,7 +82,7 @@ document.querySelector("#form-settings").addEventListener("submit", (e) => {
             document.querySelector("#btn-edit").style.display = "none"
             document.querySelector("#edit-button").style.display = "block"
             document.querySelectorAll("input").forEach(input => {
-                input.style.pointerEvents = "all";
+                input.style.pointerEvents = "none";
                 document.querySelector('#field-image').style.pointerEvents = "none";
                 input.style.border = "1px solid var(--gray-5)";
             });

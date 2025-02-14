@@ -12,7 +12,6 @@ document.querySelector("#form-register").addEventListener('submit', (event) => {
         },
         body: JSON.stringify({username:user, password: senha, email: email})
     })
-    
     .then(data => {
         if (data.status == 200) {
             Swal.fire({
