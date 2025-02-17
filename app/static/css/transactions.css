@@ -1,0 +1,20 @@
+#content-transactions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 70vh;
+}
+
+#navTransactions {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr; /* 6 colunas do mesmo tamanho */  
+    width: 100%;
+    padding: 20px 0px;
+    border-top: 1px solid var(--gray-3);
+    position: sticky;
+}
+
+#navTransactions h1 {
+    font-size: 12px;
+    color: var(--text-2);
+}

@@ -1,35 +1,17 @@
-#navTransactions {
+#content-item-transactions {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr; /* 6 colunas do mesmo tamanho */  
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--gray-3);
-}
-
-#navTransactions h1 {
-    font-size: 12px;
-    color: var(--text-2);
-}
-
-
-
-.listTile-trans {
     padding-block: 30px;
     border-bottom: 1px solid var(--gray-3);
-    width: 100%;
-    display: flex;
+    align-items: center;
+    font-size: 14px;
 }
 
-.nameBusiness {
+.name-item {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-}
-
-.nameBusiness span {
-    font-size: 14px;
 }
 
 .item-image {
@@ -37,4 +19,41 @@
     height: 40px;
     border-radius: 5px;
     background-color: var(--dark-1);
+}
+
+.content-name {
+    display: flex;
+    flex-direction: column;
+}
+
+#name-enterprise, #type, #hour {
+    color: var(--text-3);
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+}
+
+#subname, #hour {
+    font-size: 13px
+}
+
+#view-btn {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-1);
+    cursor: pointer;
+}
+
+#status {
+    background-color: #FFF1E5;
+    color: #F2994A;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 4px;
 }

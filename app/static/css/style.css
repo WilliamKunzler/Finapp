@@ -4,6 +4,7 @@
 @import url("../css/login.css");
 @import url("../css/settings.css");
 @import url("../css/listTile.css");
+@import url("../css/transactions.css");
 @import url('https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
@@ -54,5 +55,4 @@ body {
     padding-right: 40px;
     margin: 0 0 0 40px;
     overflow-y: scroll;
-    padding-bottom: 150px;
 }
