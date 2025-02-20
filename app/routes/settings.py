@@ -25,7 +25,6 @@ def loadDetails_handler():
         img_io = io.BytesIO(infoUser[0]['image'])
         img_io.seek(0)
         infoUser[0]['image'] = base64.b64encode(img_io.read()).decode('utf-8')
-        print(infoUser)
         for i in infoUser[0]:
             if infoUser[0][i] == None:
                 infoUser[0][i] = ''
