@@ -7,6 +7,9 @@ from .routes.login import login
 from .routes.transactions import transactions
 from .routes.settings import settings
 from .routes.dashboard import dashboard
+from dotenv import load_dotenv
+load_dotenv()
+
 
 def createApp():
     app = Flask(__name__)

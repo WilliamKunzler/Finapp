@@ -6,23 +6,28 @@ document.querySelector("#form-login").addEventListener('submit', (event) => {
 
     fetch("/login/entrance", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password: senha, email: email })
     })
-    .then(data => {
-        if (data.status == 200) {
-            window.location.href = '/dashboard';
-        }
-        else{
-            Swal.fire({
-                icon: "error",
-                title: "Usuário Inválido!",
-                draggable: true
-              });
-        }
+        .then(res => res.json())   // ✅ transforma a resposta em JSON
+        .then(data => {
+            console.log("Resposta do backend:", data); // aqui você verá {"status": "success", "embed_url": "..."}
 
-})
-    .catch(error => console.error("Erro na requisição:", error));
+            if (data.status === "success") {
+                // Salva a URL corretamente
+                // localStorage.setItem("embed_url", data.embed_url);
+                localStorage.setItem("auth_token", data.authentication_token);
+
+                // Redireciona
+                window.location.href = '/dashboard';
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Usuário Inválido!",
+                    draggable: true
+                });
+            }
+        })
+        .catch(error => console.error("Erro na requisição:", error));
+
 });

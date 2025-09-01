@@ -18,6 +18,8 @@ def registerUser():
 
     verify = db.query('SELECT COUNT(*) AS user_exists FROM usuarios WHERE email = %s',email, ) 
 
+    print(verify)
+
     if verify[0]['user_exists'] == 0:
         db.query('INSERT INTO usuarios VALUES (%s, %s, %s, %s)','default', email, username, password)
         # print(f"Usuário: {username}, Email: {email}, Senha: {password}")
